@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anusha - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,500;1,6..12,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body {
+        background-color: rgb(16, 16, 14);
+        color: rgb(244, 238, 238);
+        font-family: 'Nunito Sans', sans-serif;
+    }
+
+    nav {
+
+        background-color: rgb(83, 83, 77);
+        box-shadow: 3px 3px 5px rgba(red, green, blue, alpha);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        list-style: none;
+        align-items: center;
+    }
+
+    nav ul li {
+        height: 50px;
+    }
+
+    nav a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: blue;
+        font-size: large;
+    }
+
+    nav a:hover {
+        background-color: blue;
+    }
+
+    nav li:first-child {
+        margin-right: auto;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(43, 138, 247)
+    }
+
+    nav ul li a:hover {
+        color: rgb(255, 249, 241);
+        font-size: 1.2rem;
+
+    }
+
+    nav ul li a.active {
+        color: rgb(255, 249, 241);
+    }
+
+    .left {
+        font-size: xx-large;
+        font-style: bold;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    #menu-icon {
+        font-size: 35px;
+        color: var(--text-color);
+        cursor: pointer;
+        z-index: 1001;
+        display: none;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgb(65, 65, 62);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgb(80, 80, 73);
+        display:none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .sidebar li{
+        width:100%;
+    }
+    .sidebar a{
+        width:100%;
+    }
+    .menu-button{
+        display: none;
+
+    }
+
+    .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 4px 0;
+    }
+
+    .firstSection>div {
+        width: 35%;
+    }
+
+    .leftSection {
+        font-family: 'Nunito Sans', sans-serif;
+        width: 30px;
+        font-size: 1.5rem;
+        font-style: inherit;
+        margin-left: 19%;
+        margin-top: 18%;
+    }
+
+    .leftSection .buttons {
+        padding: 20px 1px;
+    }
+
+    .leftSection .btn:hover {
+        background-color: rgb(85, 86, 83);
+        color: rgb(10, 9, 10);
+    }
+
+    .buttons {
+        margin-top: 1.2rem;
+        font-size: 15px;
+
+    }
+
+    .leftSection .btn {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 1px 11px;
+        padding: 8px;
+        background-color:  #2f2b33;
+        color: rgb(184, 199, 175);
+        border: 3px solid rgb(78, 2, 242);
+        cursor: grab;
+        border-radius: 33px;
+
+    }
+
+
+    .rightSection img {
+        margin: 0px 0;
+        width: 22%;
+        height: 75%;
+        position: absolute;
+        left: 73%;
+        bottom: 3px;
+        transform: translateX(-84%);
+    }
+
+    .rightSection:hover .shape {
+        bottom: 70px;
+
+    }
+
+    .rightSection:hover .girl {
+        left: 71%;
+    }
+
+
+    .red {
+        color: rgb(5, 61, 227);
+        font-weight: bolder;
+    }
+
+    #element {
+        color: rgb(13, 52, 227);
+        font-stretch: semi-expanded;
+    }
+
+    @media (max-width:400px) {
+      .hideOnMobile{
+        display: none;
+        
+      }
+      .menu-button{
+        display: block;
+            
+        }
+        .leftSection .btn {
+    
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 9px -23px;
+            margin-left: -23px;
+            padding: 8px;
+            background-color:  #000000;
+            color: rgb(184, 199, 175);
+            border: 3px solid rgb(78, 2, 242);
+            cursor: grab;
+            border-radius: 78px;
+            margin-left: -2%;
+            text-decoration: none;
+            }
+        .leftSection{
+            font-size: 1.5rem;
+            font-style: inherit;
+            margin-left: -5%;
+            margin-top: -18%;
+        } 
+        .rightSection img{
+              margin: -100px -28px;
+               width: 42%;
+               height: 50%;
+               position: absolute;
+               left: 92%;
+               bottom: 311px;
+               transform: translateX(-86%);
+
+        } 
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 162px 4px;
+}   }
+    @media(max-width:400px) {
+        .sidebar{
+            width:50%;
+        }
+    }  
+
+
+    
+</style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></svg></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+
+            </ul>
+
+            <ul>
+                <li><a href="#">Anusha's Portfolio</a></li>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="services.html">Services</a></li>
+                <li class="hideOnMobile"><a href="project.html">Projects</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact Me</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+
+            </ul>
+
+            <div class="main">
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hello! My name is <span class="red">Anusha</span>
+                <div> and I am a </div>
+                <span id="element"></span>
+                <div class="buttons">
+                    
+                        <a href="RESUME2.0.pdf"> <button class="btn">Download Resume</button></a>
+                         
+                           <a href="https://github.com/Anusha75"> <button class="btn"> Visit Github</button></a>
+                           
+                </div>
+
+            </div>
+            <div class="rightSection">
+                <img src="shapeimage.png" class="shape">
+                <img src="IMG_20190415_175941-removebg-preview.png" class="girl">
+
+            </div>
+        </section>
+
+
+
+        </section>
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Frontend developer', 'Content Writer', 'Data Enthusiast'],
+            typeSpeed: 60,
+        });
+    </script>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display='none'
+        }
+    </script>
+
+</body>
+
+</html>

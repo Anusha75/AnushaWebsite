@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,500;1,6..12,500&family=Ubuntu&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl-+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row"></div>
+               
+            <img class="about-col-1" src="2362-removebg-preview.png">
+            <div class="about-col-2"></div>
+            <h1 class="sub-title">About Me</h1>
+            <p>I am a font-end developer. I make the website more and more interactive with web animations. 
+                A responsive design makes your website accessible to all users, regardless to the device.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('social-media')">Social-Media</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML</span><br>HyperText Markup Language</li>
+                        <li><span>CSS</span><br>Cascading Style Sheets</li>
+                        <li><span>JS</span><br>JavaScript</li>
+                        <li><span>Designer</span><br>Web Designer</li>
+                    </ul>
+                </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                        <li><span>2019-Present</span><br>BSC.CSIT at Kathmandu College Of Technology</li>
+                        <li><span>2015-2017</span><br>+2 at Capital College & Research Center</li>
+                        <li><span>2015</span><br>SLC at Little Star Higher Secondary English School</li>
+                        </ul>
+                    </div>
+                   <div class="tab-contents" id="social-media">
+                    <ul>
+                    <li> <a href="https://www.facebook.com/profile.php?id=100009246680016"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/AushaDahal"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/anusha-upadhyay-17b967276/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+              </div>
+            </div>
+        </div>
+    
+    <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
+</body>
+</html>
